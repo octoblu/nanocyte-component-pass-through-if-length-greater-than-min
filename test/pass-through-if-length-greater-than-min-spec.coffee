@@ -44,3 +44,12 @@ describe 'PassThroughIfLengthGreaterThanMin', ->
             min: 2
 
         expect(@sut.onEnvelope envelope).not.to.exist
+
+    describe 'when a min isnt set', ->
+      it 'should return the message', ->
+        envelope =
+          message: [1,2,3]
+          config:
+            min: undefined
+
+        expect(@sut.onEnvelope envelope).to.deep.equal [1,2,3]
