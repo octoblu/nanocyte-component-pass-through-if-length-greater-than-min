@@ -1,6 +1,6 @@
 {
   "name": "nanocyte-component-pass-through-if-length-greater-than-min",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nanocyte component pass-through-if-length-greater-than-min",
   "keywords": [
     "nanocyte",
