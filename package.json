@@ -1,6 +1,6 @@
 {
   "name": "nanocyte-component-pass-through-if-length-greater-than-min",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nanocyte component pass-through-if-length-greater-than-min",
   "keywords": [
     "nanocyte",
@@ -24,7 +24,7 @@
   "dependencies": {
     "coffee-script": "^1.10.0",
     "lodash": "^3.10.1",
-    "nanocyte-component-return-value": "^1.0.0"
+    "nanocyte-component-return-value": "^1.0.2"
   },
   "devDependencies": {
     "chai": "^3.3.0",
