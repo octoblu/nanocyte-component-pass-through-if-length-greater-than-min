@@ -53,3 +53,30 @@ describe 'PassThroughIfLengthGreaterThanMin', ->
             min: undefined
 
         expect(@sut.onEnvelope envelope).to.deep.equal [1,2,3]
+
+    describe 'when a min is not an int', ->
+      it 'should return the message', ->
+        envelope =
+          message: [1,2,3]
+          config:
+            min: 'ab'
+
+        expect(@sut.onEnvelope envelope).to.deep.equal [1,2,3]
+
+    describe 'when a min is the string of an int', ->
+      it 'should return the message', ->
+        envelope =
+          message: [1,2,3]
+          config:
+            min: '4'
+
+        expect(@sut.onEnvelope envelope).to.not.exist
+
+    describe 'when a min is the string of an int but should have a result', ->
+      it 'should return the message', ->
+        envelope =
+          message: [1,2,3]
+          config:
+            min: '1'
+
+        expect(@sut.onEnvelope envelope).to.deep.equal [1,2,3]
